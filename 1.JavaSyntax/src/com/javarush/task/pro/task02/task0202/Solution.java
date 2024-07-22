@@ -8,10 +8,13 @@ import java.util.Set;
 
 public class Solution {
     public static void main(String[] args) {
-        String text = "10 20 40 80";
-        Scanner console = new Scanner(text);
-        int a = console.nextInt();
-        int b = console.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите число:");
+
+        int number = sc.nextInt();
+
+        System.out.println("Спасибо! Вы ввели число " + number);
+
     }
 }
     //int age = 60;
