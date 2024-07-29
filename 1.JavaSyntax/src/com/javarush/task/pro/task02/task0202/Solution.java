@@ -8,12 +8,14 @@ import java.util.Set;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Введите число:");
-
-        int number = sc.nextInt();
-
-        System.out.println("Спасибо! Вы ввели число " + number);
+        int i = 1;
+        while (i <= 20)
+        {
+            if ( (i % 7) == 0 )
+                continue;
+            System.out.println(i);
+            i++;
+        }
 
     }
 }
