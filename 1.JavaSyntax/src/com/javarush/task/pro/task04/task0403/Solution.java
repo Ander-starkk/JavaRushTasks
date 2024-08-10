@@ -14,13 +14,13 @@ public class Solution {
             if (scanner.hasNextInt()) {
                 int number = scanner.nextInt();
                 sum = sum + number;
-            } else if (scanner.hasNextInt()) {
+            } else if (scanner.hasNextLine()) {
                 String s = scanner.nextLine();
                 if (s.equals("ENTER")) {
                     break;
+                }
             }
         }
-    }
         System.out.println(sum);
     }
 }
