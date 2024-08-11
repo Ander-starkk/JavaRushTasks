@@ -8,14 +8,13 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String m = scanner.nextLine();
+        int i = 0;
         String s = " Любит меня";
-        int n = 0;
-        while (n < 10) {
-            System.out.println(m + s);
-            n++;
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        while (i < 10) {
+            System.out.println(name + s);
+            i++;
         }
     }
-
 }
