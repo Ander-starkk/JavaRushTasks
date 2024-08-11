@@ -7,18 +7,7 @@ package com.javarush.task.pro.task02.task0202;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Solution {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int max = 0;
-        while (scanner.hasNextInt()) {
-            int x = scanner.nextInt();
-            if (x > max)
-                max = x;
-        }
-        System.out.println(max);
-    }
-}
+
 //int age = 60;
 //boolean test = (age>65);
 //if (test)
