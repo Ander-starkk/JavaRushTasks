@@ -6,15 +6,15 @@ package com.javarush.task.pro.task04.task0404;
 
 public class Solution {
     public static void main(String[] args) {
-        int stroka = 0;
-        while (stroka < 5) {
-            int stolbec = 0;
-            while (stolbec < 10) {
+        int x = 0;
+        while (x < 5) {
+            int y = 0;
+            while (y < 10) {
                 System.out.print("Q");
-                stolbec++;
+                y++;
             }
             System.out.println();
-            stroka++;
+            x++;
         }
     }
 }
