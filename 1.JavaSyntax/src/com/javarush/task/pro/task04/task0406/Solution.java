@@ -10,10 +10,11 @@ public class Solution {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            String s = scanner.nextLine();
-            if (s.equals("enough"))
+            String l = scanner.nextLine();
+            if (l.equals("enough")) {
                 break;
-            System.out.println(s);
+            }
+            System.out.println(l);
         }
     }
 }
