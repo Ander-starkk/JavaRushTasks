@@ -8,14 +8,12 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int min = Integer.MAX_VALUE;
-        while (scanner.hasNextInt()) {
-            int l = scanner.nextInt();
-            if (l < min)
-                min = l;
-            }
-            System.out.println(min);
+        for (int i = 0; i < 10; i++) {
+            int startCount = 10 - i;
+            for (int j = 0; j < startCount; j++)
+                System.out.print("*");
+            System.out.println();
+        }
     }
 }
 //     int age = 66;
