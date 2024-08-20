@@ -8,12 +8,14 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            int startCount = 10 - i;
-            for (int j = 0; j < startCount; j++)
-                System.out.print("*");
-            System.out.println();
-        }
+        double price = 6;
+        int x = (int)(5.5);
+        double t = (x * price);
+        int f = (int)(x*price);
+        double g = x/f;
+        System.out.println(x);
+        System.out.println(f);
+        System.out.println(g);
     }
 }
 //     int age = 66;
