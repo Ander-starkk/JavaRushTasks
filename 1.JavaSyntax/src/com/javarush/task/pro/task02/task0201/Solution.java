@@ -9,20 +9,16 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String s;
-        do {
-            s = scanner.nextLine();
-        }
-        while (!s.equals("exit"));
+        int x = (int) 4.1;
+        System.out.println(x);
     }
 }
-        //  int intValue = 5, numericValue = intValue + 10, size = intValue + numericValue, number = numericValue + 20
-        //  public static void main(String[] args)  {
+//  int intValue = 5, numericValue = intValue + 10, size = intValue + numericValue, number = numericValue + 20
+//  public static void main(String[] args)  {
 
-        // while (true) {
-        //   int x = System.in.read();
-        //    System.out.println(x);
-        //   }
-        //}
+// while (true) {
+//   int x = System.in.read();
+//    System.out.println(x);
+//   }
+//}
 //}
