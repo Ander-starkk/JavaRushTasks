@@ -9,8 +9,21 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-        int x = (int) 4.1;
-        System.out.println(x);
+        final double threshold = 0.0001;
+
+        double f1 = 0.0;
+        for (int i = 1; i <= 11; i++) {
+            f1 += .1;
+        }
+
+        double f2 = 0.1 * 11;
+        System.out.println("f1 = " + f1);
+        System.out.println("f2 = " + f2);
+
+        if (Math.abs(f1-f2)<threshold)
+            System.out.println("f1 и f2 равны!");
+        else
+            System.out.println("f1 и f2 не равны!");
     }
 }
 //  int intValue = 5, numericValue = intValue + 10, size = intValue + numericValue, number = numericValue + 20
