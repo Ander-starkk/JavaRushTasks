@@ -7,20 +7,12 @@ package com.javarush.task.pro.task02.task0205;
 public class Solution {
 
     public static void main(String[] args) {
-        int toothCounter = 32;
-
-        toothCounter--;
-        toothCounter--;
-        toothCounter--;
-        toothCounter--;
-        toothCounter--;
-        toothCounter--;
-        toothCounter--;
-        toothCounter--;
-        toothCounter--;
-
-
-
-        System.out.println(toothCounter);
+        for (int i = 0; i < 10; i++)
+        {
+            int starCount = 10 - i;
+            for (int j = 0; j < starCount; j++)
+                System.out.print("*");
+            System.out.println();
+        }
     }
 }
