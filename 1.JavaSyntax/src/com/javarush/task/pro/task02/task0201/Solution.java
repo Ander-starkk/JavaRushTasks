@@ -24,6 +24,7 @@ public class Solution {
             System.out.println("f1 и f2 равны!");
         else
             System.out.println("f1 и f2 не равны!");
+
     }
 }
 //  int intValue = 5, numericValue = intValue + 10, size = intValue + numericValue, number = numericValue + 20
