@@ -4,27 +4,28 @@ package com.javarush.task.pro.task02.task0201;
 «Я по объявлению…»
 */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution {
 
     public static void main(String[] args) {
-        final double threshold = 0.0001;
+        int[] months = {1, 2, 3, 4, 5, 6, 7, 8 ,9, 10, 11, 12};
+        fill(months, -1, 10, 8);
+        System.out.println(Arrays.toString(months));
+    }
 
-        double f1 = 0.0;
-        for (int i = 1; i <= 11; i++) {
-            f1 += .1;
+    public static void fill(int[] data, int from, int to, int value)
+    {
+
+
+        if (from < 0 || to > data.length)
+            return;
+
+        for (int i = from; i < to; i++)
+        {
+            data[i] = value;
         }
-
-        double f2 = 0.1 * 11;
-        System.out.println("f1 = " + f1);
-        System.out.println("f2 = " + f2);
-
-        if (Math.abs(f1-f2)<threshold)
-            System.out.println("f1 и f2 равны!");
-        else
-            System.out.println("f1 и f2 не равны!");
-
     }
 }
 //  int intValue = 5, numericValue = intValue + 10, size = intValue + numericValue, number = numericValue + 20
