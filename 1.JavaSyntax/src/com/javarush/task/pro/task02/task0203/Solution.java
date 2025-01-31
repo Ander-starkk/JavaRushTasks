@@ -2,6 +2,7 @@ package com.javarush.task.pro.task02.task0203;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
+import java.util.Stack;
 /* 
 Последняя цифра числа
 */
@@ -9,24 +10,16 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-        BigDecimal f1 = new BigDecimal(0.0);
-        BigDecimal pointOne = new BigDecimal(0.1);
+        Scanner console = new Scanner(System.in);
+        String path = console.nextLine();
+        char[] chars = path.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '/')
+                chars[i] = '\\';
 
-        for (int i = 1; i <= 11; i++) {
-            f1 = f1.add(pointOne);
         }
-
-        BigDecimal f2 = new BigDecimal(0.1);
-        BigDecimal eleven = new BigDecimal(11);
-        f2 = f2.multiply(eleven);
-
-        System.out.println("f1 = " + f1);
-        System.out.println("f2 = " + f2);
-
-        if (f1.compareTo(f2) == 0)
-            System.out.println("f1 и f2 равны!");
-        else
-            System.out.println("f1 и f2 не равны!");
+        String result = new String(chars);
+        System.out.println(result);
     }
 }
 //     int age = 66;
