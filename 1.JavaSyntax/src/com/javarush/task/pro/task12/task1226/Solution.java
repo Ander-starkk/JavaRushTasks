@@ -15,8 +15,12 @@ public class Solution {
                 new Core(5), new Core(6), new Core(7), null, null));
 
         fixRobot(amigoRobot);
-        fixRobot(diegoRobot);
-        printRobot(amigoRobot);
-        printRobot(diegoRobot);
+        //fixRobot(diegoRobot);
+        //printRobot(amigoRobot);
+       // printRobot(diegoRobot);
+
+        public static fixRobot(Robot) {
+
+        }
     }
 }
