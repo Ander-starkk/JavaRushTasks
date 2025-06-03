@@ -16,10 +16,21 @@ public class Solution {
             " ин", "отк", "ите", "ста", "пож", "ар ", "мат", "алу", " бу", "риц", "рат.", "ыт.", "ы.");
 
     public static void main(String[] args) {
-        
+        List<String> strings = decryptSecretMessage();
+        for (String string : strings) {
+            System.out.print(string);
+        }
+
     }
 
     public static List<String> decryptSecretMessage() {
-        return null;
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < secretMessage.size(); i++) {
+            if (i % 3 == 0) {
+                list.add(secretMessage.get(i));
+            }
+
+        }
+        return list;
     }
 }
