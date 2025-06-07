@@ -19,6 +19,18 @@ public class Solution {
     }
 
     public static int[] getConnection(Planet planet) {
+        Planet.OrbitalStation[] orbitalStations = planet.stations;
+        for (int i = 0; i < orbitalStations.length; i++) {
+            Planet.OrbitalStation orbitalStation = orbitalStations[i];
+            Planet.OrbitalStation.ControlSystem controlSystem = orbitalStation.controlSystem;
+            int interfacesLength = controlSystem.getInterfacesNumber();
+            for (int j = 0; j < interfacesLength; j++) {
+                Boolean answer = controlSystem.connect(j);
+                if (answer == Boolean.TRUE) {
+                    return new int[]{i, j};
+                }
+            }
+        }
         return null;
     }
 }
