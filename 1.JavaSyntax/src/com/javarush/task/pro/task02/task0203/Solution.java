@@ -1,8 +1,7 @@
 package com.javarush.task.pro.task02.task0203;
 
 import java.math.BigDecimal;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 /* 
 Последняя цифра числа
 */
@@ -10,16 +9,27 @@ import java.util.Stack;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner console = new Scanner(System.in);
-        String path = console.nextLine();
-        char[] chars = path.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            if (chars[i] == '/')
-                chars[i] = '\\';
+        HashMap<Integer, String> passportsAndNames = new HashMap<>();
 
-        }
-        String result = new String(chars);
-        System.out.println(result);
+        passportsAndNames.put(212133, "Лидия Аркадьевна Бубликова");
+        passportsAndNames.put(162348, "Иван Михайлович Серебряков");
+        passportsAndNames.put(8082771, "Дональд Джон Трамп");
+
+        String lidiaName = passportsAndNames.get(212133);
+        System.out.println(lidiaName);
+
+
+        passportsAndNames.remove(162348);
+        System.out.println(passportsAndNames);
+        System.out.println(passportsAndNames.containsKey(212133));
+        System.out.println(passportsAndNames.containsValue("Дональд Джон Трамп"));
+
+        Set<Integer> keys = passportsAndNames.keySet();
+        System.out.println("Ключи: " + keys);
+
+        ArrayList<String> values = new ArrayList<>(passportsAndNames.values());
+        System.out.println("Значения: " + values);
+
     }
 }
 //     int age = 66;
