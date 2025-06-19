@@ -38,23 +38,15 @@ public class Solution {
                 break;
             }
 
-//            try {
-//               int studentId = Integer.parseInt(input);
-//                try {
-//                    System.out.println(ANSWERING + studentsJournal.get(studentId));
-//                } catch (Exception e) {
-//                    System.out.println(NOT_EXIST);
-//                }
-//            }
-//            catch (NumberFormatException e) {
-//                System.out.println(INTEGER_REQUIRED);
-//            }
+
             try {
-                int studentId = Integer.parseInt(input);
+                int studentId;
+                studentId = Integer.parseInt(input);
                 System.out.println(ANSWERING + studentsJournal.get(studentId));
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException e2) {
                 System.out.println(INTEGER_REQUIRED);
-            } catch (ArrayIndexOutOfBoundsException e) {
+                throw e2;
+            } catch (Exception e) {
                 System.out.println(NOT_EXIST);
             }
         }
