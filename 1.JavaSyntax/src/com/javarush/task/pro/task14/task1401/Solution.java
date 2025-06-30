@@ -44,16 +44,34 @@ public class Solution {
         System.out.printf(INPUT_AGE, name);
         int age = Integer.parseInt(scanner.nextLine());
 
-        //напишите тут ваш код
-        user.setName(name);
+        int codePointName = user.setName(name);
+        if (codePointName == -1) {
+            System.out.println(CANNOT_BE_NULL);
+        } else if (codePointName == -2) {
+            System.out.println(CANNOT_BE_EMPTY);
+        } else if (codePointName == -3) {
+            System.out.println(CANNOT_CONTAIN_DIGIT);
+        } else if (codePointName != 0) {
+            System.out.printf(UNKNOWN_ERROR);
+        }
 
-        user.setAge(age);
+        int codePointAge = user.setAge(age);
+        if (codePointAge == -1) {
+            System.out.println(CANNOT_BE_NEGATIVE);
+        } else if (codePointAge == -2) {
+            System.out.println(CANNOT_BE_TOO_BIG);
+        } else if (codePointAge != 0) {
+            System.out.println(UNKNOWN_ERROR);
+        }
 
         users.add(user);
     }
 
     static void findUserIndex(User user) {
-        //напишите тут ваш код
-        System.out.printf(FOUND, user.getName(), users.indexOf(user));
+        if (users.indexOf(user) == -1) {
+            System.out.printf(NOT_FOUND, user.getName());
+        } else {
+            System.out.printf(FOUND, user.getName(), users.indexOf(user));
+        }
     }
 }
