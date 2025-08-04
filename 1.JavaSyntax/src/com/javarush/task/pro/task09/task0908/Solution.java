@@ -1,14 +1,16 @@
 package com.javarush.task.pro.task09.task0908;
 
 import java.util.regex.Pattern;
-import java.util.zip.CheckedInputStream;
 
 /* 
 Двоично-шестнадцатеричный конвертер
 */
 
 public class Solution {
-
+    private static final String HEX = "0123456789abcdef";
+    private static final String[] BINARY =
+            {"0000","0001", "0010", "0011", "0100", "0101", "0110", "0111",
+            "1000", "1001", "1010", "1011", "1100", "1101", "1110", "1111"};
     public static void main(String[] args) {
         String binaryNumber = "100111010000";
         System.out.println("Двоичное число " + binaryNumber + " равно шестнадцатеричному числу " + toHex(binaryNumber));
@@ -17,62 +19,18 @@ public class Solution {
     }
 
     public static String toHex(String binaryNumber) {
-        if (binaryNumber == "" || binaryNumber.isEmpty()) {
-            return "";
-        }
-        String hexNumber = "";
-        for (int i = 0; i < binaryNumber.length(); i=i+4) {
-            String fourBit = binaryNumber.substring(i,i+4);
-        }
-
-        return hexNumber;
+        //напишите тут ваш код
+        return null;
     }
 
     public static String toBinary(String hexNumber) {
-        if (hexNumber == "" || hexNumber.isEmpty()) {
-            return "";
-       // } else if ((hexNumber >= "0") && (hexNumber <= "10")) {
-       //     return "";
-        }
-        String binaryNumber = "";
+        StringBuilder binaryNumber = new StringBuilder();
         for (int i = 0; i < hexNumber.length(); i++) {
-            String oneHex = String.valueOf(hexNumber.charAt(i));
-            String fourBit = "";
-            if (oneHex.equals("0")) {
-                fourBit = "0000";
-            } else if (oneHex.equals("1")) {
-                fourBit = "0001";
-            } else if (oneHex.equals("2")) {
-                fourBit = "0010";
-            } else if (oneHex.equals("3")) {
-                fourBit = "0011";
-            } else if (oneHex.equals("4")) {
-                fourBit = "0100";
-            } else if (oneHex.equals("5")) {
-                fourBit = "0101";
-            } else if (oneHex.equals("6")) {
-                fourBit = "0110";
-            } else if (oneHex.equals("7")) {
-                fourBit = "0111";
-            } else if (oneHex.equals("8")) {
-                fourBit = "1000";
-            } else if (oneHex.equals("9")) {
-                fourBit = "1001";
-            } else if (oneHex.equals("A")) {
-                fourBit = "1010";
-            } else if (oneHex.equals("B")) {
-                fourBit = "1011";
-            } else if (oneHex.equals("C")) {
-                fourBit = "1100";
-            } else if (oneHex.equals("D")) {
-                fourBit = "1101";
-            } else if (oneHex.equals("E")) {
-                fourBit = "1110";
-            } else if (oneHex.equals("F")) {
-                fourBit = "1111";
-            }
-            binaryNumber = binaryNumber + fourBit;
+            char charAt = hexNumber.charAt(i);
+            int index = HEX.indexOf(charAt);
+            String fourBit = BINARY[index];
+            binaryNumber.append(fourBit);
         }
-        return binaryNumber;
+        return binaryNumber.toString();
     }
 }
