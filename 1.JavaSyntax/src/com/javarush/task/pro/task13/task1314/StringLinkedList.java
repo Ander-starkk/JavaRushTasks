@@ -20,9 +20,18 @@ public class StringLinkedList {
         last.prev = newNode;
     }
 
-    //public String get(int index) {
-        //напишите тут ваш код
-   // }
+    public String get(int index) {
+        Node currentNode = first.next;
+        int count = 0;
+        while (currentNode != null) {
+            if (index == count) {
+                return currentNode.value;
+            }
+            currentNode = currentNode.next;
+            count++;
+        }
+        return null;
+    }
 
     public static class Node {
         private Node prev;
