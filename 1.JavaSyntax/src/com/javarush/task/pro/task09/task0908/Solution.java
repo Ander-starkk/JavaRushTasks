@@ -1,5 +1,6 @@
 package com.javarush.task.pro.task09.task0908;
 
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 /* 
@@ -9,21 +10,37 @@ import java.util.regex.Pattern;
 public class Solution {
     private static final String HEX = "0123456789abcdef";
     private static final String[] BINARY =
-            {"0000","0001", "0010", "0011", "0100", "0101", "0110", "0111",
-            "1000", "1001", "1010", "1011", "1100", "1101", "1110", "1111"};
+            {"0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111",
+                    "1000", "1001", "1010", "1011", "1100", "1101", "1110", "1111"};
+
     public static void main(String[] args) {
-        String binaryNumber = "100111010000";
+        String binaryNumber = "0100111010000";
         System.out.println("Двоичное число " + binaryNumber + " равно шестнадцатеричному числу " + toHex(binaryNumber));
-        String hexNumber = "9d0";
+        String hexNumber = "09d0";
         System.out.println("Шестнадцатеричное число " + hexNumber + " равно двоичному числу " + toBinary(hexNumber));
     }
 
     public static String toHex(String binaryNumber) {
-        //напишите тут ваш код
-        return null;
+        if (binaryNumber == null || binaryNumber.isEmpty() || !binaryNumber.matches("[01]+")) {
+            return "";
+        }
+        while (binaryNumber.length() % 4 != 0) {
+            binaryNumber = 0 + binaryNumber;
+        }
+        StringBuilder hexNumber = new StringBuilder();
+        for (int i = 0; i < binaryNumber.length(); i = i + 4) {
+            String fourBit = binaryNumber.substring(i, i + 4);
+            int index = Arrays.binarySearch(BINARY, fourBit);
+            char charAt = HEX.charAt(index);
+            hexNumber.append(charAt);
+        }
+        return hexNumber.toString();
     }
 
     public static String toBinary(String hexNumber) {
+        if (hexNumber == null || hexNumber.isEmpty() || !hexNumber.matches("[0-9a-f]+")) {
+            return "";
+        }
         StringBuilder binaryNumber = new StringBuilder();
         for (int i = 0; i < hexNumber.length(); i++) {
             char charAt = hexNumber.charAt(i);
