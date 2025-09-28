@@ -8,14 +8,18 @@ import java.util.Scanner;
 */
 
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
         String str1 = scanner.nextLine();
         String str2 = scanner.nextLine();
         Path path1 = Path.of(str1);
         Path path2 = Path.of(str2);
-        Path result = path1.relativize(path2);
-        System.out.println(result);
+        try {
+            Path result = path1.relativize(path2);
+            System.out.println(result);
+        } catch (IllegalArgumentException e) {
+
+        }
     }
 }
 
